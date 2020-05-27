@@ -44,10 +44,10 @@
 						<a class="main-menu__btn"><span></span></a>
 						<div class="main-menu__nav">
 							<a href="#">Главная</a>
-							<a href="#">О нас</a>
-							<a href="#">Услуги</a>
-							<a href="#">Наши работы</a>
-							<a href="#">Контакты</a>
+							<a href="#credo">О нас</a>
+							<a href="#development">Услуги</a>
+							<a href="#projects">Наши работы</a>
+							<a href="#form">Контакты</a>
 						</div>
 					</div>
 				</div>
@@ -63,71 +63,40 @@
 					</div>
 				</div>
 				<div class="main-services">
-					<div class="main-services__goals" id ="services__goals" >
-						<div class="main-services__goals--img">
-							<img src="./img/rocket.png" alt="">
-						</div>
+					<div class="main-services__goals goalsleft" id ="services__goals" >
+						<div class="main-services__goals--img goals--imgrocket"></div>
 						<div class="main-services__goals--headline">Старт</div>
 						<div class="main-services__goals--informayion">
 							Вы хотите получать больше клиентов и прибыли из интернета? С нуля разработаем сайт любой сложности, учитывая индивидуальные особенности вашего бизнеса. Стоимость создания сайта в каждом конкретном случае индивидуальна и рассчитывается исходя из положений и требований клиента
 						</div>
-					</div>
-					<div class="main-services__goals--wrapperleft" id="servies_goals__wrapper">
-						<div class="main-services__goals--img--wrapper"></div>
-						<div class="main-services__goals--headline--wrapper">Старт</div>
-						<div class="main-services__goals--informayion--wrapper">
-							Вы хотите получать больше клиентов и прибыли из интернета? 
-						</div>
 						<div class="main-services__goals-btnicon">
-							<div class="main-services__goals--btn">от 1000 руб</div>
-							<div class="main-services__goals--imgicon"></div>
+							<div class="main-services__goals--btn">от 9000 руб</div>
+							<a class="main-services__goals--imgicon"><span></span></a>
 						</div>
 					</div>
-					
-					<div class="main-services__goals">
-						<div class="main-services__goals--img">
-							<img src="./img/phone.png" alt=""> 
-						</div>
+					<div class="main-services__goals goalscenter">
+						<div class="main-services__goals--img goals--imgphone"></div>
 						<div class="main-services__goals--headline">Продвижение</div>
 						<div class="main-services__goals--informayion">
 							Один из важнейштх этапов продвижения сайта является оптимизация(SEO), которая предоставляет собой комплекс мер по повышению позиции сайта в поисковых системах, и, таким образом, позволяет увеличить его целевую посещаемость.
+						</div>
+						<div class="main-services__goals-btnicon goals-btnicon">
+							<div class="main-services__goals--btn">от 5000 руб</div>
+							<a class="main-services__goals--imgicon"><span></span></a>
 						</div>	
 					</div>
-					<div class="main-services__goals--wrappercenter">
-						<div class="main-services__goals--img--wrapper"></div>
-						<div class="main-services__goals--headline--wrapper">Стт</div>
-						<div class="main-services__goals--informayion--wrapper">
-							Один
-						</div>
-						<div class="main-services__goals-btnicon">
-							<div class="main-services__goals--btn">от 1000 руб</div>
-							<div class="main-services__goals--imgicon"></div>
-						</div>
-					</div>
-					<div class="main-services__goals">
-						<div class="main-services__goals--img">
-							<img src="./img/love.png" alt="">
-						</div>
+					<div class="main-services__goals goalsright">
+						<div class="main-services__goals--img goals--imgplove"></div>
 						<div class="main-services__goals--headline">Поддержка</div>
 						<div class="main-services__goals--informayion">
 							У вас уже работающий бизнес и Вы регулярно нуждаетесь в услугах веб- студии, но брать сотрудника в штат и оборудовать допалнительное рабочее место не выгодно? Мы готовы взять эти проблемы на себя и предоставить нужыне услги удаленно.
 						</div>
-					</div>
-					<div class="main-services__goals--wrapperright">
-						<div class="main-services__goals--img--wrapper">
-							 <img src="./img/lovewrapper.png" alt="">
-						</div>
-						<div class="main-services__goals--headline--wrapper">Поддер</div>
-						<div class="main-services__goals--informayion--wrapper">
-							У вас уже
-						</div>
-						<div class="main-services__goals-btnicon">
+						<div class="main-services__goals-btnicon goals-btnicon">
 							<div class="main-services__goals--btn">от 1000 руб</div>
-							<div class="main-services__goals--imgicon"></div>
+							<a class="main-services__goals--imgicon"><span></span></a>
 						</div>
-					</div>
-
-					</div>
+					</div>		
+				</div>
 				<div class="main-credo" >
 					<div class="main-credo__bground">
 						<div class="main-credo__wrapper">
@@ -342,11 +311,40 @@
 	<div class="footer"></div>
 </div>
 	<script >
-		
+
 		$('.main-menu__btn').on('click', function(e) {
 			e.preventDefault();
 			$('.main-wrapper-1__nav').toggleClass('menu_active');
-		})
+			$('.main-menu__btn').toggleClass('main-menu__btn--active');
+			$('.main-nav__content').toggleClass('main-nav__content--active');
+		});
+		$('.goalsleft').on('mouseover mouseout', function(e) {
+			e.preventDefault();	
+			$('.goalsleft').toggleClass('main-services__goals--active');
+		});
+		$('.goalscenter').on('mouseover mouseout', function(e) {
+			e.preventDefault();	
+			$('.goalscenter').toggleClass('main-services__goals--active');
+		});
+		$('.goalsright').on('mouseover mouseout',function(e) {
+			e.preventDefault();	
+			$('.goalsright').toggleClass('main-services__goals--active');
+		});
+		$('.goalsleft').on('mouseover mouseout', function(e) {
+			e.preventDefault();	
+			$('.goals--imgrocket').toggleClass('main-services__goals--img-actrocket');
+		});
+		$('.goalscenter').on('mouseover mouseout', function(e) {
+			e.preventDefault();	
+			$('.goals--imgphone').toggleClass('main-services__goals--img-actphone');
+		});
+		$('.goalsright').on('mouseover mouseout',function(e) {
+			e.preventDefault();	
+			$('.goals--imgplove').toggleClass('main-services__goals--activelove');
+		});
+		$(.'main-projects__img-projct12').on('mouseover mouseout', function(e) {
+			e.preventDefault();	
+			$('.main-projects__img-projct12').toggleClass ('main-projects__img-projct12-activ')
 		
 	</script>
 </body>
